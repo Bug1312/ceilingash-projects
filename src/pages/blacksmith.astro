@@ -1,0 +1,55 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ModrinthButton from '../components/ModrinthButton.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="Blacksmith - Forge Optimized" description="The best way to play with Forge." />
+		<style>
+			body {
+				background-color: #969696;
+				font-family: 'Inter Variable', sans-serif;
+			}
+			main {
+				max-width: 720px;
+			}
+			h1 {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.5em;
+				font-weight: 500;
+			}
+			a {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/blacksmith/logo.png" class="project-logo">
+			<h1 class="project-center project-title">Blacksmith</h1>
+			<h2 class="project-center">The best way to play with Forge.</h2>
+			<div class="fps-compare">
+				<div class="fps-compare-box">
+					<h3><b>Blacksmith</b></h3>
+					<p><b>650 FPS</b></p>
+				</div>
+				<div class="fps-compare-box">
+					<h3>Vanilla</h3>
+					<p>350 FPS</p>
+				</div>
+			</div>
+			<p class="project-desc">Blacksmith keeps your performance top-notch by optimizing Forge, along with many QoL improvements.</p>
+			<p class="project-desc">Get up to 3x your current FPS just by using Blacksmith instead of regular unoptimized Forge!</p>
+			<ModrinthButton href="https://modrinth.com/modpack/blacksmith">Modrinth</ModrinthButton>
+		</main>
+		<Footer />
+	</body>
+</html>
+

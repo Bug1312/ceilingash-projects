@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ModrinthButton from '../components/ModrinthButton.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="Glow Lichen Fix" description="Stop getting annoyed at those fake diamonds!" />
+		<style>
+			body {
+				color: var(--white);
+				background-color: #6d897e;
+				font-family: 'Inter Variable', sans-serif;
+			}
+			main {
+				max-width: 720px;
+			}
+			h1 {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.5em;
+				font-weight: 500;
+			}
+			a {
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/glf/logo.png" class="project-logo">
+			<h1 class="project-center project-title">Glow Lichen Fix</h1>
+			<h2 class="project-center">Stop getting annoyed at those fake diamonds!</h2>
+			<p class="project-desc">This pack turns glow lichen blocks into an alternative vine.</p>
+			<p class="project-desc">Every single version of Minecraft with glow lichen is supported (1.17-current). If there isn't a download for your version, try the closest one, as it will probably work!</p>
+			<ModrinthButton href="https://modrinth.com/resourcepack/glowlichenfix">Modrinth</ModrinthButton>
+		</main>
+		<Footer />
+	</body>
+</html>
+

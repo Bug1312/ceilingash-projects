@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ModrinthButton from '../components/ModrinthButton.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="Excalibur - Flawless Forge" description="The better way to play Forge." />
+		<style>
+			body {
+				color: var(--white);
+				background-color: #090029;
+				font-family: 'Inter Variable', sans-serif;
+			}
+			main {
+				max-width: 720px;
+			}
+			h1 {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.5em;
+				font-weight: 500;
+			}
+			a {
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/excalibur/logo.png" class="project-logo">
+			<h1 class="project-center project-title">Excalibur</h1>
+			<h2 class="project-center">The better way to play Forge.</h2>
+			<p class="project-desc">Make your old Minecraft worlds a bit more interesting! Experience the wonder of the ocean with Oceanic Expanse, a more detailed landscape with Additional Structures and so much more.</p>
+			<p class="project-desc">Unsurprisingly, the market for this type of pack is incredibly saturated, so Excalibur is on the backburner right now. Updates can and will come out at any time, although none are guaranteed.</p>
+			<ModrinthButton href="https://modrinth.com/modpack/excalibur-forge">Modrinth</ModrinthButton>
+		</main>
+		<Footer />
+	</body>
+</html>
+

@@ -1,0 +1,59 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ModrinthButton from '../components/ModrinthButton.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="Harmony - Absolute Optimization" description="All optimization packs in one." />
+		<style>
+			body {
+				background-color: #fed315;
+				font-family: 'Inter Variable', sans-serif;
+			}
+			main {
+				max-width: 720px;
+			}
+			h1 {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.5em;
+				font-weight: 500;
+			}
+			a {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/harmony/logo.svg" class="project-logo" style="border-color: var(--black) !important;">
+			<h1 class="project-center project-title">Harmony</h1>
+			<h2 class="project-center">All optimization packs in one.</h2>
+			<div class="fps-compare">
+				<div class="fps-compare-box" style="border-color: var(--black) !important;">
+					<h3><b>Harmony</b></h3>
+					<p><b>800 FPS</b></p>
+				</div>
+				<div class="fps-compare-box" style="border-color: var(--black) !important;">
+					<h3>Simply Optimized</h3>
+					<p>650 FPS</p>
+				</div>
+				<div class="fps-compare-box" style="border-color: var(--black) !important;">
+					<h3>Vanilla</h3>
+					<p>300 FPS</p>
+				</div>
+			</div>
+			<p class="project-desc">The goal of Harmony is to include as many mods as possible from the most popular optipacks (optimization modpacks), to create the best possible level of optimization.</p>
+			<p class="project-desc">The full list of mods is available <a href="https://docs.google.com/spreadsheets/d/1bZftt35T6wwtLUTr5wu5-Ty8oygfZfCCRapJead0BJc/edit?usp=sharing">here</a>.</p>
+			<ModrinthButton href="https://modrinth.com/modpack/harmonymod">Modrinth</ModrinthButton>
+		</main>
+		<Footer />
+	</body>
+</html>
+

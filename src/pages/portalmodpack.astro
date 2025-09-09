@@ -1,0 +1,47 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import ModrinthButton from '../components/ModrinthButton.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="PortalMP" description="Portal in Minecraft!" />
+		<style>
+			body {
+				color: var(--white);
+				background-color: #0044ff;
+				font-family: 'Inter Variable', sans-serif;
+			}
+			main {
+				max-width: 720px;
+			}
+			h1 {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.5em;
+				font-weight: 500;
+			}
+			a {
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<img src="/portal/logo.png" class="project-logo">
+			<h1 class="project-center project-title">The Portal Modpack</h1>
+			<h2 class="project-center">Portal in Minecraft!</h2>
+			<p class="project-desc">The Portal Modpack blends the physics-defying portal mechanics of the Portal series with Minecraft's creative freedom, letting you craft and solve puzzles.</p>
+			<p class="project-desc">If you want to create a testing track for the modpack and have it featured on the Modrinth page, please email me (my email is on my Linktree). Only high quality solvable puzzles are allowed.</p>
+			<p class="project-desc">Please note: this pack is seperate to Portal: Java Edition.</p>
+			<ModrinthButton href="https://modrinth.com/modpack/the-portal-modpack">Modrinth</ModrinthButton>
+		</main>
+		<Footer />
+	</body>
+</html>
+
