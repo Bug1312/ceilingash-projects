@@ -95,7 +95,23 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		color: #fff;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 1400px) {
+		.pageheader {
+			font-size: 1.5em;
+		}
+		.project-box {
+			font-size: 0.5em;
+		}
+		.project-boxes {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0.5em;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 610px) {
 		.pageheader {
 			font-size: 1.5em;
 		}

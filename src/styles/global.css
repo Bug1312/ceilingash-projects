@@ -4,6 +4,13 @@
 	--white: #fff;
 	--header-height: 3.65rem;
 }
+[data-theme="dark"] {
+	--accent: #0db50d;
+	--black: #fff;
+	--white: #000;
+	--header-height: 3.65rem;
+}
+
 @font-face {
 	font-family: 'Press Start 2P';
 	font-style: normal;
@@ -26,7 +33,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: var(--white) no-repeat;
+	background: var(--white);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;

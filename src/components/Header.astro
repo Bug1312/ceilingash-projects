@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -41,6 +42,7 @@ const currentPath = Astro.url.pathname;
 		</button>
 		
 		<div class="social-links">
+			<ThemeToggle />
 			<a href="https://ko-fi.com/ceilingash">
 				<span class="sr-only">Ko-Fi</span>
 				<svg viewBox="0 0 24 24" aria-hidden="true" width="32" height="32">
@@ -91,6 +93,7 @@ const currentPath = Astro.url.pathname;
 				</div>
 			</div>
 			<div class="mobile-social-links">
+				<ThemeToggle />
 				<a href="https://ko-fi.com/ceilingash">
 					<span class="sr-only">Ko-Fi</span>
 					<svg viewBox="0 0 24 24" aria-hidden="true" width="32" height="32">
@@ -378,7 +381,7 @@ const currentPath = Astro.url.pathname;
 		color: var(--black);
 	}
 
-	@media (min-width: 751px) {
+	@media (min-width: 1131px) {
 		.mobile-menu-btn {
 			display: none;
 		}
@@ -388,12 +391,8 @@ const currentPath = Astro.url.pathname;
 		}
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 1130px) {
 		.social-links {
-			display: none;
-		}
-		
-		.header-title {
 			display: none;
 		}
 		
@@ -406,7 +405,7 @@ const currentPath = Astro.url.pathname;
 		}
 
 		nav {
-			justify-content: flex-end;
+			justify-content: space-between;
 		}
 	}
 </style>

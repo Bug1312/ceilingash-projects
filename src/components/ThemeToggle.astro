@@ -1,0 +1,60 @@
+<button id="theme-toggle" aria-label="Toggle Theme">
+  <span class="light-icon">
+    <svg viewBox="0 0 87.5 87.5" aria-hidden="true" width="24" height="24">
+      <path fill="currentColor" d="M 25 50 L 25 62.5 L 12.5 62.5 L 12.5 87.5 L 25 87.5 L 25 75 L 62.5 75 L 62.5 87.5 L 75 87.5 L 75 62.5 L 62.5 62.5 L 62.5 50 L 50 50 L 50 62.5 L 37.5 62.5 L 37.5 50 L 25 50 Z M 50 25 L 87.5 25 L 87.5 37.5 L 75 37.5 L 75 50 L 62.5 50 L 62.5 37.5 L 50 37.5 L 50 25 Z M 37.5 25 L 0 25 L 0 37.5 L 12.5 37.5 L 12.5 50 L 25 50 L 25 37.5 L 37.5 37.5 L 37.5 25 Z M 50 0 L 50 25 L 37.5 25 L 37.5 0 L 50 0 Z"/>
+    </svg>
+  </span>
+  <span class="dark-icon">
+    <svg viewBox="0 0 87.5 87.5" aria-hidden="true" width="24" height="24">
+      <path fill="currentColor" d="M 25 87.5 L 12.5 87.5 L 12.5 62.5 L 25 62.5 L 25 50 L 12.5 50 L 12.5 37.5 L 0 37.5 L 0 25 L 37.5 25 L 37.5 0 L 50 0 L 50 25 L 87.5 25 L 87.5 37.5 L 75 37.5 L 75 50 L 62.5 50 L 62.5 62.5 L 75 62.5 L 75 87.5 L 62.5 87.5 L 62.5 75 L 50 75 L 50 62.5 L 37.5 62.5 L 37.5 75 L 25 75 L 25 87.5 Z"/>
+    </svg>
+  </span>
+</button>
+
+<style>
+  button {
+    border: none;
+    background: none;
+    margin: 0.75em 0;
+		padding: 0.25em 0.5em;
+		font-size: 1em;
+		color: var(--black);
+		text-decoration: none;
+		line-height: 1.5;
+		display: inline-block;
+  }
+
+  button:hover,
+	button.active {
+		text-decoration: none;
+		background-color: var(--accent);
+		color: var(--white);
+	}
+  
+  .dark-icon {
+    display: none;
+  }
+  
+  [data-theme="dark"] .light-icon {
+    display: none;
+  }
+  
+  [data-theme="dark"] .dark-icon {
+    display: inline;
+  }
+</style>
+
+<script>
+  const toggleButton = document.querySelector('#theme-toggle');
+  
+  function setTheme(theme: string) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  
+  toggleButton?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const newTheme = current === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  });
+</script>
